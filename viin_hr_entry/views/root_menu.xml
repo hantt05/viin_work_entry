@@ -1,0 +1,11 @@
+<odoo>
+	<data>
+		<menuitem id="root_menu"
+			sequence="10" name="Work Entry"/>
+	</data>
+	
+	<data>
+		<menuitem id="configuration" name="Configuration"
+			sequence="20" parent="menu_root"/>
+	</data>
+</odoo>
