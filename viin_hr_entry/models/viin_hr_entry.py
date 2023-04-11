@@ -5,8 +5,8 @@ class ViinWorkEntry(models.Model):
     _description = 'Viin Work Entry'
 
 
-def action_cancel_work_entry(self):
-    for r in self:
-        if r.state == 'conflict':
-            r.write({'state':'Cancelled'})
+# def action_cancel_work_entry(self):
+#     for r in self:
+#         if r.state == 'conflict':
+#             r.write({'state':'Cancelled'})
             

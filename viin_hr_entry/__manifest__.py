@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "viin_hr_entry",
+    'name': "Viin Work Entries",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Manager work entry of employee""",
 
     'description': """
         Long description of module's purpose
@@ -20,13 +19,14 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','hr_work_entry'],
+    'depends': ['base','hr_work_entry','hr_work_entry_contract'],
 
     # always loaded
     'data': [
+        'security/viin_hr_entry_security.xml',
         'security/ir.model.access.csv',
         'views/root_menu.xml',
-        'views/views.xml',
+        'views/viin_hr_entry_views.xml',
         'views/security.xml',
         'views/templates.xml',
     ],

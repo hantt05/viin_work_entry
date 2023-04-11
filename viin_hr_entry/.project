@@ -4,6 +4,7 @@
 	<comment></comment>
 	<projects>
 		<project>0.odoo_16</project>
+		<project>16.tvtmaaddons_16</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
