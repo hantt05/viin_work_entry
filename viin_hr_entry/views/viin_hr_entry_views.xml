@@ -1,61 +1,28 @@
 <odoo>
 	<data>
-<!-- 		<record id="hr_work_entry_action_conflict"
+		<record id="hr_work_entry_action_conflict"
 			model="ir.actions.act_window">
 			<field name="name">Work Entry Conflict</field>
 			<field name="res_model">hr.work.entry</field>
 			<field name="context">{'search_default_work_entries_error': 1}</field>
 			<field name="view_mode">tree,calendar,form,pivot</field>
-		</record> -->
+		</record>
 
 		<record id="hr_work_entry_action" model="ir.actions.act_window">
 			<field name="name">Work Entry</field>
 			<field name="res_model">hr.work.entry</field>
 			<field name="view_mode">calendar,tree,form,pivot</field>
 		</record>
-<!-- 
-		<record id="hr_work_entry_analysis_action"
-			model="ir.actions.act_window">
-			<field name="name">Work Entries Analysis</field>
-			<field name="res_model">hr.work.entry</field>
-			<field name="view_mode">tree,form,pivot</field>
-		</record>
- -->
-<!-- 		<record id="hr_employee"
-			model="ir.actions.act_window">
-			<field name="name">Employee</field>
-			<field name="res_model">hr.employee</field>
-			<field name="view_mode">tree,form</field>
-		</record> -->
-		
-<!-- 		<record id="work_entry_working_schedule"
-			model="ir.actions.act_window">
-			<field name="name">Working schedule</field>
-			<field name="res_model">hr.employee</field>
-			<field name="view_mode">tree,form</field>
-		</record> -->
-
-<!-- 		<record id="action_cancel_hr_work_entry" model="ir.actions.server"> 
-			<field name="name">Cancel Work Entry</field> <field name="type">ir.actions.server</field> 
-			<field name="model_id" ref="model_hr.work.entry" />
-			<field name="binding_model_id" 
-			ref="model_hr.work.entry" />
-			<field name="state">code</field> <field name="code">records.action_cancel_work_entry()</field> 
-		</record>  -->
 
 		<menuitem id="viin_hr_entry_menu" name ="Work entry"
-			action="hr_work_entry_action" parent="root_menu" sequence="10"/>
+			action="hr_work_entry_action" parent="viin_hr_work_entry_menu_main" sequence="10"/>
 
-<!-- 		<menuitem id="viin_hr_entry_conflict"
-			action="hr_work_entry_action_conflict" parent="root_menu"
-			sequence="10"/>
-
-		<menuitem id="hr_work_entry_analysis"
-			action="hr_work_entry_analysis_action" parent="root_menu"
-			sequence="10"/>
+		<menuitem id="viin_hr_entry_conflict" name="Work Entry Conflict"
+			action="hr_work_entry.hr_work_entry_action_conflict" parent="viin_hr_entry_menu"
+			sequence="20"/>
 
  		<menuitem id="menu_hr_employee"
-			action="hr.open_view_employee_tree" parent="viin_hr_entry_menu"
-			sequence="10"/> -->
+			action="hr.hr_employee_public_action" parent="viin_hr_entry_menu"
+			sequence="30"/>
 	</data>
 </odoo>

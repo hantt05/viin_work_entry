@@ -3,7 +3,7 @@
     'name': "Viin Work Entries",
 
     'summary': """
-        Manager work entry of employee""",
+        Manage work entry of employee""",
 
     'description': """
         Long description of module's purpose
@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','hr_work_entry','hr_work_entry_contract'],
+    'depends': ['base','hr','hr_work_entry','hr_work_entry_contract'],
 
     # always loaded
     'data': [

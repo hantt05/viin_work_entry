@@ -1,8 +1,8 @@
 <odoo>
 	<data>
 		<menuitem id="root_menu" sequence="10" name="Work Entry">
-			<menuitem id="viin_hr__work_entry_menu" sequence="20" name="Work Entry">
-					<menuitem id="menu_conflict" name="Work Entry Conflict" action="hr_work_entry.hr_work_entry_action_conflict" sequence="2"/>
+			<menuitem id="viin_hr_work_entry_menu_main" sequence="20" name="Work Entry">
+					<!-- <menuitem id="menu_conflict" name="Work Entry Conflict" action="hr_work_entry.hr_work_entry_action_conflict" sequence="2"/> -->
 			</menuitem>
 			
 			<menuitem id="configuration" name="Configuration"
