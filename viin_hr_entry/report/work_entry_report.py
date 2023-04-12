@@ -6,7 +6,7 @@ class WorkEntryAnalylis(models.Model):
     _auto = False
     
     employee_id = fields.Many2one('hr.employee', readonly=True)
-    work_entry_type_id = fields.Many2one('hr.work.entry.type', readonly=True)
+    work_entry_type_id = fields.Many2one('hr.work.entry.type',string="Work entry type", readonly=True)
     state = fields.Char(readonly=True)
     date_start = fields.Date(string='Start Date', readonly=True)
     date_stop = fields.Date(string='End Date', readonly=True)

@@ -1,13 +1,5 @@
 <odoo>
 	<data>
-		<record id="hr_work_entry_action_conflict"
-			model="ir.actions.act_window">
-			<field name="name">Work Entry Conflict</field>
-			<field name="res_model">hr.work.entry</field>
-			<field name="context">{'search_default_work_entries_error': 1}</field>
-			<field name="view_mode">tree,calendar,form,pivot</field>
-		</record>
-
 		<record id="hr_work_entry_action" model="ir.actions.act_window">
 			<field name="name">Work Entry</field>
 			<field name="res_model">hr.work.entry</field>
@@ -16,13 +8,5 @@
 
 		<menuitem id="viin_hr_entry_menu" name ="Work entry"
 			action="hr_work_entry_action" parent="viin_hr_work_entry_menu_main" sequence="10"/>
-
-		<menuitem id="viin_hr_entry_conflict" name="Work Entry Conflict"
-			action="hr_work_entry.hr_work_entry_action_conflict" parent="viin_hr_entry_menu"
-			sequence="20"/>
-
- 		<menuitem id="menu_hr_employee"
-			action="hr.hr_employee_public_action" parent="viin_hr_entry_menu"
-			sequence="30"/>
 	</data>
 </odoo>

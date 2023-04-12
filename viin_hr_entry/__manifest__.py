@@ -27,7 +27,8 @@
         'security/ir.model.access.csv',
         'views/root_menu.xml',
         'views/viin_hr_entry_views.xml',
-        'views/security.xml',
+        'report/viin_hr_entry_report.xml',
+        'views/res_config_settings_work_entry_views.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode

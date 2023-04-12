@@ -48,9 +48,9 @@
 		</record>
 		
 		<menuitem id="work_entry_reports_menu" name="Reports"
-			sequence="2" parent="root_menu">
+			sequence="30" parent="root_menu">
 			<menuitem id="menu_action_work_entry_report" name="Work Entry Analysis"
-					action="viin_hr_work_entries.action_work_entry_report" sequence="1"/>
+					action="action_work_entry_report" sequence="1"/>
 		</menuitem>
 	</data>
 </odoo>
