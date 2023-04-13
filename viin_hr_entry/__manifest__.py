@@ -6,7 +6,7 @@
         Manage work entry of employee""",
 
     'description': """
-        Long description of module's purpose
+        This module manage work entries of employee in your company
     """,
 
     'author': "My Company",
@@ -35,5 +35,6 @@
     'demo': [
         'demo/demo.xml',
     ],
-    'application':True
+    'application':True,
+    'license':'LGPL-3'
 }

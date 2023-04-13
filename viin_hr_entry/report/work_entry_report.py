@@ -10,14 +10,17 @@ class WorkEntryAnalylis(models.Model):
     state = fields.Char(readonly=True)
     date_start = fields.Date(string='Start Date', readonly=True)
     date_stop = fields.Date(string='End Date', readonly=True)
+    duration = fields.Float(string="Period", readonly=True)
     
+    @property
     def _table_query(self):
-        return '%s %s' % (self._select(), self._frorm())
+        return '%s %s' % (self._select(), self._from())
 
     @api.model
     def _select(self):
         return """
-        SELECT we.id AS id, 
+        SELECT 
+            we.id AS id, 
             emp.id AS employee_id, 
             type.id AS work_entry_type_id, 
             we.name AS name, 
@@ -28,7 +31,7 @@ class WorkEntryAnalylis(models.Model):
     @api.model
     def _from(self):
         return """
-        FROM hr_work_entry we
-            JOIN hr_employee emp ON we.employee_id=emp.id
-            JOIN hr_work_entry_type type ON we.work_entry_type_id=type.id
+        FROM hr_work_entry AS we
+            JOIN hr_employee AS emp ON emp.id = we.employee_id
+            JOIN hr_work_entry_type AS type ON type.id = we.work_entry_type_id
         """    

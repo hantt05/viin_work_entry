@@ -1,6 +1,6 @@
 <odoo>
 	<data>
-		<menuitem id="root_menu" sequence="1" name="Work Entry">
+		<menuitem id="root_menu" sequence="1" name="Work Entry" web_icon="viin_hr_entry,static/description/work_entry.png">
 			<menuitem id="viin_hr_work_entry_menu_main" sequence="20" name="Work Entry">
 				 <menuitem id="menu_conflict" name="Work Entry Conflict"
 				  action="hr_work_entry.hr_work_entry_action_conflict" sequence="10"/>
