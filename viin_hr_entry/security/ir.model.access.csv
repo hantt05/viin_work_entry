@@ -1,4 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_viin_hr_entry,viin_hr_entry,model_hr_work_entry,base.group_user,1,1,1,1
+access_viin_hr_entry,viin_hr_entry,model_hr_work_entry,base.group_user,1,0,0,0
 access_viin_work_entry_employee,viin_hr_entry,hr_work_entry.model_hr_user_work_entry_employee,base.group_user,1,1,1,1
 access_work_entry_report,work_entry_report,model_work_entry_report,base.group_user,1,1,1,1
+access_viin_hr_entry_user,viin_hr_entry,model_hr_work_entry,viin_hr_entry.group_user,1,0,0,0

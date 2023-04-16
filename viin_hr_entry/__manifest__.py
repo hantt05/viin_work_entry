@@ -3,7 +3,7 @@
     'name': "Viin Work Entries",
 
     'summary': """
-        Manage work entry of employee""",
+        Manage work entries of employee""",
 
     'description': """
         This module manage work entries of employee in your company
@@ -15,7 +15,7 @@
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Uncategorized',
+    'category': 'Human Resources/Work Entry',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
@@ -36,5 +36,6 @@
         'demo/demo.xml',
     ],
     'application':True,
+    'images': ['static/description/main_screenshot.png'],
     'license':'LGPL-3'
 }
