@@ -29,7 +29,10 @@
         <record id="viin_work_entry_user" model="ir.rule">
             <field name="name">Work Entry User</field>
             <field name="model_id" ref="hr_work_entry.model_hr_work_entry"></field>
-            <field name="domain_force">['|',('employee_id.user_id', '=', user.id),('employee_id', 'IN','current_user.employee_ids.subordinate_ids.ids')]</field>
+            <field name="domain_force">[
+            	'|',
+            	('employee_id', 'in', (user.employee_id.subordinate_ids | user.employee_ids.subordinate_ids).ids),
+            	('employee_id.department_id.manager_id.user_id', '=', user.id)]</field>
             <field name="groups" eval="[(4, ref('base.group_user'))]"/>
             <field eval="0" name="perm_unlink"/>
             <field eval="0" name="perm_write"/>
@@ -40,13 +43,13 @@
         <record id="viin_work_entry_subordinate" model="ir.rule">
             <field name="name">Work Entry Manager and Subordinates </field>
             <field name="model_id" ref="hr_work_entry.model_hr_work_entry"></field>
-            <field name="domain_force">['|',('employee_id.user_id', '=', user.id),('employee_id', 'IN','current_user.employee_ids.subordinate_ids.ids')]</field>
+            <field name="domain_force">['|',('employee_id.user_id', '=', user.id),('employee_id', 'IN','user.employee_id.subordinate_ids.ids')]</field>
             <field name="groups" eval="[(4, ref('viin_hr_entry.group_user'))]"/>
             <field eval="1" name="perm_unlink"/>
             <field eval="1" name="perm_write"/>
             <field eval="1" name="perm_read"/>
             <field eval="1" name="perm_create"/>
-        </record> 
+        </record>
         
 <!--     	<record id="viin_work_entry_officer" model="ir.rule">
             <field name="name">Work entry Officer</field>
